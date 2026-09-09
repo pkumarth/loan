@@ -17,6 +17,12 @@ class SheetConfig:
   master_tsv_path: str = "emi_records.tsv"
   payment_tsv_path: str = "emi_payments.tsv"
 
+  # Target Destination Worksheets
+  loan_spreadsheet: str = "LOAN"
+  loan_worksheet: str = "LOAN2026"
+  payment_spreadsheet: str = "PAYMENT"
+  payment_worksheet: str = "PAYMENT2026"
+
   # Loan Identifier settings
   start_loan_id: int = 1001
 
