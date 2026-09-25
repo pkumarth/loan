@@ -1,3 +1,27 @@
+Book:
+-----
+Mike Mobassion framework 
+Masterclass With Super Investors 
+Common Stocks and Uncommon Profits and Other Writings by Philip Arthur Fisher
+Capital Returns: Investing Through the Capital Cycle
+Mastering the market cycle by Howard Marks
+The Most Important Thing  by Howard Marks
+The Dip by Seth Godin
+Margin of Safety by Seth Klarman
+New Age Enterprenur 
+What I Learned About Investing from Darwin by Pulak Prasad -> singnal of success and failure  chapter 7 
+The Almanack of Naval Ravikant 
+Tao of Charlie Munger Book Summary
+Poor Charlie’s Almanack by Charlie Munger
+Zero to One: Notes on Startups, or How to Build the Future, entrepreneur and investor by Peter Thiel 
+The Psychology of Money by Morgan Housel
+thinking fast and slow by daniel kahneman
+Nassim Nicholas Taleb:
+- The Black Swan: The Impact of the Highly Improbable
+- Antifragile: Things That Gain from Disorder
+- Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets
+- Skin in the Game: Hidden Asymmetries in Daily Life
+
 
 Team 11:
 --------
@@ -40,18 +64,36 @@ https://antifragilethinking.substack.com/p/howard-marks-the-most-important-thing
 cdmo:
 -----
 => 4 Unique Companies: Near-Term Noise, Long-Term Systems : Timken India, PI Industries, Privi Speciality Chemicals, and Viyash Life Science
-9 Companies in PF: Beyond the Quarter: Sai Life, Aether Industries ,Akums Drugs,Gland Pharma,Solara Active,Biocon,SGRL,Bajaj Healthcare,Aarti Drugs
+=> 9 Companies in PF: Beyond the Quarter: Sai Life, Aether Industries ,Akums Drugs,Gland Pharma,Solara Active,Biocon,SGRL,Bajaj Healthcare,Aarti Drugs
 
 => https://antifragilethinking.substack.com/p/cdmo-insights-tariffs-us-manufacturing-e71
 => https://antifragilethinking.substack.com/p/rqt-backward-integration-and-chemical 
 https://antifragilethinking.substack.com/p/the-never-performers-hikal-and-kopran 
-https://antifragilethinking.substack.com/p/solara-active-applying-peter-thiels
+
+-> iol , sms pharma and solara are in ibofurin . solar sales ibopurfin to divis . it gpm is high . it is making peptide  , therupatical and hpa and hypotent api  . crams optionality is wide open 
+-> makers lab 
+-> granules -> paracemtal dependecy , fda challenge and not passed , fragility is not reducing 
+-> chemical company  like aarti industry (benzend) and amine are hazardous . it is in process of replacement by enztme
+-> PE and EV/EBITA is very dangerous as do not earning is cyclical . 
+->EV/OCF for avg 5to7 year average is good for cyclical industry .Also see P/B and P/S also good .
+-> cashflow concentraion(rate of change of business)
+-> Overall fragility(debt,capabality,capacity,optinality,rate of change, us fda challenge)
+-> Antifragile potfolio investment-> Disclaimer: laurus>neuland>hikal>Syngene>solara>piramal pharma>jubliant(pharam+ingrevia)>DCAL>suven Pharma>shilpa medicare -> supriya life 
+https://antifragilethinking.substack.com/p/solara-active-applying-peter-thiels => divis ,subven ,laurus ,neuland stood from 2023 to 2026 but did bad perform - hikal
+-> in cyclical business entry price is very imp and selling is also imp in few year : ex- aarti industry , sudarshan chem 
+=> do not buy if everone is buying and if u do , no return will be there . in crams wait for first time growth and then take decision . also check if buisness will be for 10 year or not 
+-> financial no is fooling us. insqualitaive of buisness - focus on terminal value rather than today situation ,know industry structure , know management & what change they are doing and what capabality they are adding,business margin low and high and why it is low margin or high margin , why roce is low or high 
+-> in solara track - 1. Vizag restart and scaleup   2. Growth in CRAMS
+-> Mohnish Pabrai - There can be n reasons for a promoter selling his holdings but usually a single reason for buying - He is BULLISH on the future of the business.
+-< cheap  signal -> cohance , piramal etc  take debt for survive . tv  lecture , giving big guidance 
+-> expanse signalling: solara(mgmt quality ,honesty and execution is good ) earlier was this in catg ,now changing to good signalling . Do business anlayis by by doing some off part evolution 
+=> read gen mark life science . why gross margin change 
 https://antifragilethinking.substack.com/p/solara-navigating-uncertainty-unlocking 
 https://antifragilethinking.substack.com/p/solara-pharma-the-signal-and-the 
 https://antifragilethinking.substack.com/p/shivalik-rasayan-emerging-from-the 
 https://antifragilethinking.substack.com/p/laurus-labs-antifragility-unfolding
-https://antifragilethinking.substack.com/p/laurus-labs-screaming-valuation-heuristic
 https://antifragilethinking.substack.com/p/reimagining-laurus-labs-2030-part-0c4
+https://antifragilethinking.substack.com/p/laurus-labs-screaming-valuation-heuristic
 https://antifragilethinking.substack.com/p/syngene-4q-f25-f26-outlook-and-hidden
 https://antifragilethinking.substack.com/p/syngene-and-at20-important-update 
 https://antifragilethinking.substack.com/p/quick-overview-neulands-fractals 
@@ -206,74 +248,3 @@ https://antifragilethinking.substack.com/p/no-nonsense-sip-works-across-cycles
 Trump Tariff:
 -------------
 https://antifragilethinking.substack.com/p/tariffsthe-corridor-of-extreme-uncertainty 
-
-
-
-
-Positive:
----------
-Can Shaily Engineering Do It Again? 
-Vikram Thermo: The System Changed! 
-Azad Engg. vs Anthem Bio 
-Ather Energy: Five Fables at an Inflection Point 
-https://antifragilethinking.substack.com/p/two-acquisitions-two-tests-of-strategic
-Ingrevia-Zettaone 
-Alivus-IQGenX 
-Sai Life Sciences has spent its latest annual report talking about Shraddha, Saburi, infrastructure, scientific breakthroughs and 34 commercial molecules. On the surface, these are separate statements
-Tata Elxsi vs Intellect Design 
-Entero Lens on MPS? How? Why?
-The Proof Gap - A different way to look at the Symbiotec Pharmalab IPO
-When Your Greatest Strength Becomes Your Greatest Risk - Exide vs Amara Raja and the challenge of crossing a technology line 
-SRF: Great Quarter. Now Let's Look Underneath. 
-The Cost of Becoming Too Good at One Thing- PI Industries, the decade-long CDMO question, and the price of delayed diversification.
-Praj’s Two Bets - Sarkaar-Nirbhar, Atmanirbhar
-Unlike the four companies, Ingrevia, Eureka Forbes, Syngene and Biocon, which I named in my long note, the issue here is not access. It is how management responds to the question. Don’t attack the person or push your own agenda.
-Sansera and CUMI -> Sansera: Given the order book and decent cash flows, isn’t the CWIP lagging behind.
-Viyash Scientific 
-Deepak Nitrite: The Questions I Asked Management, and Why
-Shilpa, Neuland, Navin: The Next Rupee of Capital
-Sona Comstar: You Cannot Survey the Future 
-The Real Bet on Sona Comstar: Can Engineering Travel? 
-Unimech: When Capability Becomes Capital .Same applied to Divis, laurus, Sona, and Anthem.
-Concord Biotech: Beyond First-Order Thinking : https://antifragilethinking.substack.com/p/concord-biotech-beyond-first-order 
-When Your Customer Learns to Build - Intellect Design Arena and the Race to Stay Ahead of Its Own Customers 
-Piramal Pharma:
-https://antifragilethinking.substack.com/p/the-factory-must-be-fed 
-Syngene: The Burden of Proof - Has Syngene Earned Another Decade of Patient Capital?
-Manipal Health Enterprises - Getting Better, Not Just Bigger. 
-Fairchem Organics, Syngene, Biocon, Laurus, Sansera, Sona, Neuland - Cognitive Heuristic: Don't Watch Events. Watch the Loops. Feedback loop - laurus vs biocon group 
-https://antifragilethinking.substack.com/p/cognitive-heuristic-dont-watch-events 
-Neogen: Bigger Isn't the Question. Different Is. see sajal question in concall . 1. Feedback Loops 2. Map and Territory 3. Second-Order Thinking  4. Inversion 
-Acutaas & Solara: What Really Changed?  https://antifragilethinking.substack.com/p/acutaas-and-solara-what-really-changed
-
-Bajaj Healthcare , Granules India -> You Don't Own a Stock. You Own a Hypothesis. 
-https://antifragilethinking.substack.com/p/you-dont-own-a-stock-you-own-a-hypothesis 
-Tatva Chintan: The Hardest Thing to Copy 
-
-The Two Stories Newgen Is Telling 
-Advanced Enzymes: Whose Clock Is Setting the Price?
-Jagsonpal Didn't Buy Growth. It Bought a Door - The real test isn't Aequitas' revenue. It's whether Jagsonpal's own brands can walk through it. 
-Jagsonpal: A Machine Holding Steady Under Constraint
-Jubilant Ingrevia: The Numbers Are the Last Thing That Happens 
-An Owner's View on Piramal Pharma, Cohance Life and Syngene : Where Accidents Meet Institutions 
-https://antifragilethinking.substack.com/p/where-accidents-meet-institutions 
-Data Patterns: When Capability Becomes the Strategy : Deploying the CDMO lens from Framing Business Uncertainty 
-Aarti Pharmalabs: Is Management Building a Moat or Just Building Capacity?
-Sansera Isn't Diversifying. It's Compounding Capabilities.
-Conviction Is Not Binary : AZAD Engg. | Aarti Pharma | Aether Industries
-Thermax: Engineering Through Constraints Into Scale
-
- Ather Energy: Complexity as Advantage
- Aarti industry 
- IKS–TruBridge: A Strategic Shift with Execution Risk
-
-
-
-
-
-
-
-
-Good Article:
--------------
-https://antifragilethinking.substack.com/p/the-dopamine-trap 
