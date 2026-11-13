@@ -1,0 +1,1428 @@
+{
+  "info": {
+    "name": "MFL Core API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "address_id",
+      "value": "1"
+    },
+    {
+      "key": "customer_id",
+      "value": "1"
+    },
+    {
+      "key": "emi_loan_id",
+      "value": "1"
+    },
+    {
+      "key": "onetime_loan_id",
+      "value": "3"
+    },
+    {
+      "key": "schedule_id",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "health"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Addresses",
+      "item": [
+        {
+          "name": "Create address",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"country\": \"India\",\n  \"state\": \"BIHAR\",\n  \"district\": \"MADHUBANI\",\n  \"police_station\": \"TESTPS\",\n  \"village\": \"TESTVILLAGE\",\n  \"mohalla\": \"TESTMOHALLA\",\n  \"ward_no\": \"3\",\n  \"landmark\": \"NEAR TEMPLE\",\n  \"postal_code\": \"847101\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "List addresses",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get address",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses",
+                "{{address_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update address (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses",
+                "{{address_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"country\": \"India\",\n  \"state\": \"BIHAR\",\n  \"district\": \"MADHUBANI\",\n  \"police_station\": \"TESTPS\",\n  \"village\": \"TESTVILLAGE\",\n  \"mohalla\": \"TESTMOHALLA\",\n  \"ward_no\": \"3\",\n  \"landmark\": \"NEAR TEMPLE\",\n  \"postal_code\": \"847101\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Patch address",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses",
+                "{{address_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"landmark\": \"OPPOSITE SCHOOL\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete address",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "addresses",
+                "{{address_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "Create customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_name\": \"RAJEEV MAHATO\",\n  \"guardian_name\": \"NANDLAL MAHATO\",\n  \"guardian_relation\": \"FATHER\",\n  \"customer_mobile\": \"9876543210\",\n  \"address_id\": 1,\n  \"guarantor_id\": 2,\n  \"guarantor_relation\": \"FATHER\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Create guarantor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_name\": \"GUARANTOR NAME\",\n  \"guardian_name\": \"GUARANTOR GUARDIAN\",\n  \"customer_mobile\": \"9123456780\",\n  \"address_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "List customers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get customer",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers",
+                "{{customer_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update customer (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers",
+                "{{customer_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_name\": \"RAJEEV MAHATO\",\n  \"guardian_name\": \"NANDLAL MAHATO\",\n  \"guardian_relation\": \"FATHER\",\n  \"customer_mobile\": \"9876543210\",\n  \"address_id\": 1,\n  \"guarantor_id\": 2,\n  \"guarantor_relation\": \"FATHER\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Patch customer",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers",
+                "{{customer_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"guardian_name\": \"NEW GUARDIAN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete customer",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "customers",
+                "{{customer_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Loans",
+      "item": [
+        {
+          "name": "Create EMI loan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"principal_amt\": 12000,\n  \"borrowing_date\": \"2026-09-01\",\n  \"emi_start_date\": \"2026-09-01\",\n  \"manager_amount\": 7000,\n  \"owner_amount\": 5000,\n  \"loan_type\": \"EMI\",\n  \"total_no_of_kist\": 12,\n  \"installment_amount\": 1000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Create MONTHLY_INTEREST loan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"principal_amt\": 8000,\n  \"borrowing_date\": \"2026-09-01\",\n  \"manager_amount\": 4000,\n  \"owner_amount\": 4000,\n  \"loan_type\": \"MONTHLY_INTEREST\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Create ONETIME loan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"principal_amt\": 10000,\n  \"borrowing_date\": \"2026-09-15\",\n  \"manager_amount\": 6000,\n  \"owner_amount\": 4000,\n  \"loan_type\": \"ONETIME\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "List loans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get loan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans",
+                "{{emi_loan_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update loan (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans",
+                "{{emi_loan_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customer_id\": 1,\n  \"principal_amt\": 12000,\n  \"borrowing_date\": \"2026-09-01\",\n  \"emi_start_date\": \"2026-09-01\",\n  \"manager_amount\": 7000,\n  \"owner_amount\": 5000,\n  \"loan_type\": \"EMI\",\n  \"total_no_of_kist\": 12,\n  \"installment_amount\": 1000,\n  \"rate_of_interest\": 2.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Patch loan rate",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans",
+                "{{emi_loan_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rate_of_interest\": 2.5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete loan",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/loans/{{onetime_loan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "loans",
+                "{{onetime_loan_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Payment Schedules",
+      "item": [
+        {
+          "name": "Create schedule row",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loan_id\": 1,\n  \"current_kist_no\": 1,\n  \"installment_date\": \"2026-10-12\",\n  \"installment_amount\": 1000,\n  \"amount_paid\": 0,\n  \"forgive_amount\": 0,\n  \"manager_received_amount\": 0,\n  \"owner_received_amount\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "List schedule rows",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List rows for a loan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules?loan_id={{emi_loan_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules"
+              ],
+              "query": [
+                {
+                  "key": "loan_id",
+                  "value": "{{emi_loan_id}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get schedule row",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "{{schedule_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update schedule row (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "{{schedule_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loan_id\": 1,\n  \"current_kist_no\": 1,\n  \"installment_date\": \"2026-10-12\",\n  \"installment_amount\": 1000,\n  \"amount_paid\": 500,\n  \"forgive_amount\": 0,\n  \"manager_received_amount\": 250,\n  \"owner_received_amount\": 250\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Patch schedule field",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "{{schedule_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"payer_name\": \"RAMESH\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete schedule row",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "{{schedule_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Generate monthly (dry run)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/generate-monthly",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "generate-monthly"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dry_run\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Generate monthly (Nov 2026)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/generate-monthly",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "generate-monthly"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"billing_year\": 2026,\n  \"billing_month\": 11,\n  \"cycle_12_start_day\": 8,\n  \"cycle_12_cutoff_day\": 20,\n  \"dry_run\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ONETIME",
+      "item": [
+        {
+          "name": "Dry run all ONETIME (paginated)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-dry-run?page=1&size=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "onetime-dry-run"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"hisab_date\": \"2026-11-14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Settlement dry run",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-settlement",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "onetime-settlement"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loan_id\": 3,\n  \"hisab_date\": \"2026-11-14\",\n  \"dry_run\": true,\n  \"manager_received_amount\": 0,\n  \"owner_received_amount\": 0,\n  \"forgive_amount\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Settlement real run",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-settlement",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "onetime-settlement"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loan_id\": 3,\n  \"hisab_date\": \"2026-11-14\",\n  \"dry_run\": false,\n  \"manager_received_amount\": 500,\n  \"owner_received_amount\": 500,\n  \"forgive_amount\": 0,\n  \"payer_name\": \"RAMESH\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Overdue & Report",
+      "item": [
+        {
+          "name": "Overdue compute all (dry run)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/overdue-compute",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "overdue-compute"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dry_run\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Overdue compute one loan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/overdue-compute",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "overdue-compute"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loan_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Report dry run",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/report-generate",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "report-generate"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dry_run\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Report real run (Nov 2026)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "praveen"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/mfl-core/api/v1/payment-schedules/report-generate",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "mfl-core",
+                "api",
+                "v1",
+                "payment-schedules",
+                "report-generate"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"billing_year\": 2026,\n  \"billing_month\": 11,\n  \"dry_run\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

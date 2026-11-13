@@ -1,0 +1,113 @@
+# Health - Health
+curl -s -X GET "{{base_url}}/mfl-core/health" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Addresses - Create address
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/addresses" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"country": "India", "state": "BIHAR", "district": "MADHUBANI", "police_station": "TESTPS", "village": "TESTVILLAGE", "mohalla": "TESTMOHALLA", "ward_no": "3", "landmark": "NEAR TEMPLE", "postal_code": "847101"}'
+
+# Addresses - List addresses
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/addresses?page=1&size=10" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Addresses - Get address
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Addresses - Update address (PUT)
+curl -s -X PUT "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"country": "India", "state": "BIHAR", "district": "MADHUBANI", "police_station": "TESTPS", "village": "TESTVILLAGE", "mohalla": "TESTMOHALLA", "ward_no": "3", "landmark": "NEAR TEMPLE", "postal_code": "847101"}'
+
+# Addresses - Patch address
+curl -s -X PATCH "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"landmark": "OPPOSITE SCHOOL"}'
+
+# Addresses - Delete address
+curl -s -X DELETE "{{base_url}}/mfl-core/api/v1/addresses/{{address_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Customers - Create customer
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/customers" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_name": "RAJEEV MAHATO", "guardian_name": "NANDLAL MAHATO", "guardian_relation": "FATHER", "customer_mobile": "9876543210", "address_id": 1, "guarantor_id": 2, "guarantor_relation": "FATHER"}'
+
+# Customers - Create guarantor
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/customers" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_name": "GUARANTOR NAME", "guardian_name": "GUARANTOR GUARDIAN", "customer_mobile": "9123456780", "address_id": 1}'
+
+# Customers - List customers
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/customers?page=1&size=10" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Customers - Get customer
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Customers - Update customer (PUT)
+curl -s -X PUT "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_name": "RAJEEV MAHATO", "guardian_name": "NANDLAL MAHATO", "guardian_relation": "FATHER", "customer_mobile": "9876543210", "address_id": 1, "guarantor_id": 2, "guarantor_relation": "FATHER"}'
+
+# Customers - Patch customer
+curl -s -X PATCH "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"guardian_name": "NEW GUARDIAN"}'
+
+# Customers - Delete customer
+curl -s -X DELETE "{{base_url}}/mfl-core/api/v1/customers/{{customer_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Loans - Create EMI loan
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/loans" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_id": 1, "principal_amt": 12000, "borrowing_date": "2026-09-01", "emi_start_date": "2026-09-01", "manager_amount": 7000, "owner_amount": 5000, "loan_type": "EMI", "total_no_of_kist": 12, "installment_amount": 1000}'
+
+# Loans - Create MONTHLY_INTEREST loan
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/loans" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_id": 1, "principal_amt": 8000, "borrowing_date": "2026-09-01", "manager_amount": 4000, "owner_amount": 4000, "loan_type": "MONTHLY_INTEREST"}'
+
+# Loans - Create ONETIME loan
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/loans" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_id": 1, "principal_amt": 10000, "borrowing_date": "2026-09-15", "manager_amount": 6000, "owner_amount": 4000, "loan_type": "ONETIME"}'
+
+# Loans - List loans
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/loans?page=1&size=10" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Loans - Get loan
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Loans - Update loan (PUT)
+curl -s -X PUT "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"customer_id": 1, "principal_amt": 12000, "borrowing_date": "2026-09-01", "emi_start_date": "2026-09-01", "manager_amount": 7000, "owner_amount": 5000, "loan_type": "EMI", "total_no_of_kist": 12, "installment_amount": 1000, "rate_of_interest": 2.0}'
+
+# Loans - Patch loan rate
+curl -s -X PATCH "{{base_url}}/mfl-core/api/v1/loans/{{emi_loan_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"rate_of_interest": 2.5}'
+
+# Loans - Delete loan
+curl -s -X DELETE "{{base_url}}/mfl-core/api/v1/loans/{{onetime_loan_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Payment Schedules - Create schedule row
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"loan_id": 1, "current_kist_no": 1, "installment_date": "2026-10-12", "installment_amount": 1000, "amount_paid": 0, "forgive_amount": 0, "manager_received_amount": 0, "owner_received_amount": 0}'
+
+# Payment Schedules - List schedule rows
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/payment-schedules?page=1&size=10" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Payment Schedules - List rows for a loan
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/payment-schedules?loan_id={{emi_loan_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Payment Schedules - Get schedule row
+curl -s -X GET "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Payment Schedules - Update schedule row (PUT)
+curl -s -X PUT "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"loan_id": 1, "current_kist_no": 1, "installment_date": "2026-10-12", "installment_amount": 1000, "amount_paid": 500, "forgive_amount": 0, "manager_received_amount": 250, "owner_received_amount": 250}'
+
+# Payment Schedules - Patch schedule field
+curl -s -X PATCH "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"payer_name": "RAMESH"}'
+
+# Payment Schedules - Delete schedule row
+curl -s -X DELETE "{{base_url}}/mfl-core/api/v1/payment-schedules/{{schedule_id}}" -H "Content-Type: application/json" -H "X-User-Id: praveen"
+
+# Payment Schedules - Generate monthly (dry run)
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/generate-monthly" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"dry_run": true}'
+
+# Payment Schedules - Generate monthly (Nov 2026)
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/generate-monthly" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"billing_year": 2026, "billing_month": 11, "cycle_12_start_day": 8, "cycle_12_cutoff_day": 20, "dry_run": false}'
+
+# ONETIME - Dry run all ONETIME (paginated)
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-dry-run?page=1&size=10" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"hisab_date": "2026-11-14"}'
+
+# ONETIME - Settlement dry run
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-settlement" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"loan_id": 3, "hisab_date": "2026-11-14", "dry_run": true, "manager_received_amount": 0, "owner_received_amount": 0, "forgive_amount": 0}'
+
+# ONETIME - Settlement real run
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/onetime-settlement" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"loan_id": 3, "hisab_date": "2026-11-14", "dry_run": false, "manager_received_amount": 500, "owner_received_amount": 500, "forgive_amount": 0, "payer_name": "RAMESH"}'
+
+# Overdue & Report - Overdue compute all (dry run)
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/overdue-compute" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"dry_run": true}'
+
+# Overdue & Report - Overdue compute one loan
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/overdue-compute" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"loan_id": 1}'
+
+# Overdue & Report - Report dry run
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/report-generate" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"dry_run": true}'
+
+# Overdue & Report - Report real run (Nov 2026)
+curl -s -X POST "{{base_url}}/mfl-core/api/v1/payment-schedules/report-generate" -H "Content-Type: application/json" -H "X-User-Id: praveen" -d '{"billing_year": 2026, "billing_month": 11, "dry_run": false}'
