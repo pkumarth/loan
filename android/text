@@ -1,1 +1,1 @@
-
+cd /home/test/Documents/personal/mfl/mfl-android-app && timeout 580 ./gradlew --no-daemon assembleDebug 2>&1 | grep -E '^e:|BUILD|FAIL' | head -30; ls app/build/outputs/apk/debug/*.apk 2>/dev/null
